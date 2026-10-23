@@ -1,0 +1,168 @@
+/* Remove margens e espaçamentos padrão para permitir um layout previsível. */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Define a tipografia e aplica a faixa de fundo horizontal da página. */
+body{
+    font-family: "Trebuchet MS", Helvetica,sans-serif;
+    background: #fffa url("../img/fundo.png") repeat-x;
+}
+
+/* Centraliza a área principal e define sua largura fixa. */
+#container{
+    width: 900px;
+    margin: 0 auto;
+    border: 1px none;
+}
+
+/* Reserva espaço para o cabeçalho e posiciona o detalhe gráfico à direita. */
+#topo{
+    height: 150px;
+    background: url("../img/detalhe-topo.png") no-repeat right top;
+    padding-top: 25px;
+    border: 1px none;
+}
+
+/* Exibe a marca como imagem de fundo e oculta visualmente o texto alternativo. */
+.logo{
+    width: 300px;
+    height: 100px;
+    background: url("../img/logo.png") no-repeat left top;
+    float: left;
+    margin-left: 20px;
+    text-indent: -9999px;
+}
+
+/* Remove os estilos de lista padrão para a navegação e outras listas. */
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Aplica a cor de fundo e organiza os itens da navegação horizontalmente. */
+#topo ul {
+    margin-top: 0;
+    background: #5c0101;
+    float: left;
+}
+
+/* Mantém cada item da navegação lado a lado. */
+#topo ul li{
+    float: left;
+}
+
+/* Formata os links e exibe a imagem divisória entre eles. */
+#topo ul li a{
+    font-size: 0.9em;
+    display: block;
+    padding: 0.5em 1.5em;
+    line-height: 2.1em;
+    text-decoration: none;
+    color: #ffff;
+    background: url(../img/divisor.png)no-repeat right top;
+}
+
+/* Destaca o link ao passar o cursor sem exibir a divisória nesse estado. */
+#topo ul li a:hover{
+    color: #22f506;
+    background: none;
+}
+
+/* Identifica o link da página atual e impede que pareça clicável. */
+body.home #navegacao a#home,
+body.brasil #navegacao a#noticiasBrasil,
+body.economia #navegacao a#noticiasEconomia,
+body.tecnologia #navegacao a#noticiasTecnologia,
+body.esportes #navegacao a#noticiasEsportes,
+body.entretenimento #navegacao a#noticiasEntretenimento,
+body.ciencias #navegacao a#noticiasCiencias,
+body.fotos #navegacao a#noticiasFotos{
+    color: #fff;
+    background: #5c0101;
+    cursor: text;
+}
+
+/* Configura a área de conteúdo e contém as colunas flutuantes. */
+#conteudo{
+    margin-top: 70px;
+    background: #ededf7;
+    display: flow-root;
+}
+
+/* Define a largura e o posicionamento da primeira coluna. */
+ #primario{
+    width: 250px;
+    float: left;
+    background: #deeeff;
+}
+
+/* Define o layout de conteúdo para páginas com uma coluna. */
+#umaColuna #secundario{
+    width: 900px;
+    background: #deeeff;
+    margin-top: 25px;
+}
+
+/* Define a largura e o posicionamento da coluna central em páginas com duas colunas. */
+ #duasColunas #secundario{
+    width: 600px;
+    float: left;
+    background: #deeeff;
+    margin-left: 25px;
+    margin-bottom: 25px;
+}
+
+/* Define a largura e o posicionamento da coluna central em páginas com três colunas. */
+ #tresColunas #secundario{
+    width: 300px;
+    float: left;
+    background: #deeeff;
+    margin-left: 25px;
+    margin-bottom: 25px;
+}
+
+/* Define a largura e o posicionamento da coluna lateral. */
+#lateral{
+    width: 300px;
+    float: left;
+    background: #deeeff;
+    margin-left: 25px;
+}
+
+/* Cria a faixa do rodapé sem ultrapassar a largura da janela. */
+#container-rodape{
+    background: #cdc1c5;
+    padding: 25px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, Helvetica, sans-serif;
+}
+
+/* Centraliza o conteúdo do rodapé dentro da faixa. */
+#rodape{
+    margin: 0 auto;
+    background: #cdddde;
+    width: 100%;
+    max-width: 900px;
+    box-sizing: border-box;
+    text-align: center;
+    color: #000;
+}
+
+/* Destaca o cabeçalho das caixas de conteúdo. */
+.caixa{
+    background-color:#020255 ;
+    height: 30px;
+    padding: 5px;
+    color: #fff;
+    text-align: center;
+}
+
+/* Aplica a textura de fundo ao conteúdo interno da caixa. */
+.caixaConteudo{
+    background: #fff url(../img/fundo-caixa.png);
+    margin-top: 10px;
+}
