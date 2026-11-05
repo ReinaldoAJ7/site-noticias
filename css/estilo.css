@@ -132,6 +132,30 @@ body.fotos #navegacao a#noticiasFotos{
     margin-left: 25px;
 }
 
+/* Destaca o cabeçalho das caixas de conteúdo. */
+.caixa{
+    margin:0px;
+    background:#020255 ;
+    height: 30px;
+    padding: 5px;
+    color: #fff;
+    text-align: center;
+    width: 96%;
+}
+h2{
+    padding-top: 5px;
+    font-size: 1.1em;
+    color: #fff;
+    text-align: left;
+}
+
+/* Aplica a textura de fundo ao conteúdo interno da caixa. */
+.caixaConteudo{
+    padding: 5px;
+    background: #fff url(../img/fundo-caixa.png);
+    margin-top: 10px;
+}
+
 /* Cria a faixa do rodapé sem ultrapassar a largura da janela. */
 #container-rodape{
     background: #cdc1c5;
@@ -139,6 +163,52 @@ body.fotos #navegacao a#noticiasFotos{
     width: 100%;
     box-sizing: border-box;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, Helvetica, sans-serif;
+}
+
+/*Formatar menus laterais*/
+ #primario ul a{
+    color: #000;
+    font-size: 0.9em;
+    display: block;
+    padding: 3px;
+    text-decoration: none;
+    line-height: 30px;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+#primario ul a:hover{
+    color: #22f506;
+    background: #f3f3f3 url(../img/marcador.png)no-repeat left center;
+    padding-left: 30px;
+}
+
+label{
+    padding: 10px 0px 10px 0px;
+    display: block;
+    cursor: pointer;
+    width: 95%;
+}
+
+#email{
+    margin-left: 1px;
+    width: 97%;
+    padding: 5px 0px 5px 0px;
+}
+
+input{
+    text-align: center;
+    padding: 5px;
+    width: 125px;
+    font-size: 0.9em;
+    background-color: #f3f3f3;
+}
+
+input.submit{
+    margin-top: 5px;
+    width: 100px;
+    color: #fff;
+    background-color: #494848;
+    border: 2px solid #333232;
 }
 
 /* Centraliza o conteúdo do rodapé dentro da faixa. */
@@ -150,19 +220,4 @@ body.fotos #navegacao a#noticiasFotos{
     box-sizing: border-box;
     text-align: center;
     color: #000;
-}
-
-/* Destaca o cabeçalho das caixas de conteúdo. */
-.caixa{
-    background-color:#020255 ;
-    height: 30px;
-    padding: 5px;
-    color: #fff;
-    text-align: center;
-}
-
-/* Aplica a textura de fundo ao conteúdo interno da caixa. */
-.caixaConteudo{
-    background: #fff url(../img/fundo-caixa.png);
-    margin-top: 10px;
 }
