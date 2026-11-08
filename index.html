@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Planeta Diário - Comprometido com a verdade</title>
-    <link rel="stylesheet" href="css/estilo.css?v=3">
+    <link rel="stylesheet" href="css/estilo.css?v=5">
 </head>
 <body id="tresColunas" class="home">
-    <div id="container">
+    <div id="container"> <!-- Início da div #container -->
         <!-- Cabeçalho e navegação principal. -->
-        <div id="topo">
+        <div id="topo"> <!-- Início da div #topo, cabeçalho do site -->
             <h1 class="logo">Notícia Cidade</h1>
             <ul id="navegacao">
                 <li><a id="home" href="index.html">Home</a></li>
@@ -19,17 +19,18 @@
                 <li><a id="noticiasEsportes" href="noticiasEsportes.html">Esportes</a></li>
                 <li><a id="noticiasEntretenimento" href="noticiasEntretenimento.html">Entretenimento</a></li>
                 <li><a id="noticiasCiencias" href="noticiasCiencias.html">Ciências</a></li>
-                <li><a id="noticiasFotos" href="noticiasFotos.html">Fotos</a></li>
+                <li><a id="noticiasFotos" href="fotos.html">Fotos</a></li>
             </ul>
-        </div>
+        </div> <!-- Fim da div #topo -->
 
         <!-- Conteúdo principal em três colunas. -->
-        <div id="conteudo">
-            <div id="primario">
-                <div class="caixa">
+        <div id="conteudo"> <!-- Início da div #conteudo, área das colunas -->
+        
+            <div id="primario"> <!-- Início da div #primario, coluna principal -->
+                <div class="caixa"> <!-- Início da div .caixa, título de entrevistas -->
                     <h2>Entrevista</h2>
-                </div>
-                <div class="caixaConteudo">
+                </div> <!-- Fim da div .caixa, título de entrevistas -->
+                <div class="caixaConteudo"> <!-- Início da div .caixaConteudo, lista de entrevistas -->
                     <ul>
                         <li><a href="entrevista1.html">José de Almeida</a></li>
                         <li><a href="entrevista2.html">Felipe Silva</a></li>
@@ -40,48 +41,129 @@
                         <li><a href="entrevista4.html">João Pedro</a></li>
                         <li><a href="entrevista5.html">Fernando Weiss</a></li>
                     </ul>
-                </div>
+                </div> <!-- Fim da div .caixaConteudo, lista de entrevistas -->
 
-                <div class="caixa">
+                <div class="caixa"> <!-- Início da div .caixa, título do formulário -->
                     <h2>News</h2>
-                </div>
-                <div class="caixaConteudo">
+                </div> <!-- Fim da div .caixa, título do formulário -->
+                <div class="caixaConteudo"> <!-- Início da div .caixaConteudo, formulário de inscrição -->
                     <form>
                         <label for="email">E-mail:</label>
                         <input type="email" name="email" id="email" placeholder="Informe teu e-mail">
                         <input class="submit" type="submit" value="Cadastrar">
                     </form>
-                </div>
-            </div>
+                </div> <!-- Fim da div .caixaConteudo, formulário de inscrição -->
+            </div> <!-- Fim da div #primario -->
+<!----------------------------------------------------------------------------------------------------------------------------------------------->
 
-            <div id="secundario">
-                <div class="caixa">
-                    <h2>Destaque</h2></div>
-                <div class="caixaConteudo destaque">
+            <div id="secundario"> <!-- Início da div #secundario, coluna de destaques -->
+                <div class="caixa"> <!-- Início da div .caixa, título do primeiro destaque -->
+                    <h2>Destaque</h2>
+                </div> <!-- Fim da div .caixa, título do primeiro destaque -->
+                <div class="caixaConteudo destaque"> <!-- Início da div .caixaConteudo.destaque, matéria sobre legislação -->
                     <h3 class="destaque-titulo">Nova legislação</h3>
                     <img class="taxi" src="img/taxi.jpg" alt="Táxi">
                     <p>Nova legislação entra em vigor nesta quarta-feira, trazendo alterações significativas para os motoristas de táxi na cidade, incluindo novas regras de licenciamento e tarifas.</p>
-                </div>
-            </div>
+                </div> <!-- Fim da div .caixaConteudo.destaque, matéria sobre legislação -->
+                <div class="caixa destaque"> <!-- Início da div .caixa.destaque, título do segundo destaque -->
+                    <h2>Mundo</h2>
+                </div> <!-- Fim da div .caixa.destaque, título do segundo destaque -->
+                <div class="caixaConteudo destaque"> <!-- Início da div .caixaConteudo.destaque, conteúdo do segundo destaque -->
+                    <ul class="listaNoticias"> <!-- Início da lista de notícias -->
+                        <li>
+                            <a href="">
+                                <img src="img/tecnologia.jpg" width="100">
+                                <h3>Novas tecnologias</h3><p>A tesla conseguiu um feito extraordinário, trouxe a 
+                                    tecnologia de dragon ball para os carros, agora eles 
+                                    voam e podem ser armazenados em cápsulas.</p> 
+                            </a>
+                        </li>
 
-            <div id="lateral">
-                <div class="caixa">
+                        <li>
+                            <a href="">
+                                <img src="img/tecnologia.jpg" width="100">
+                                <h3>Novas tecnologias</h3><p>A tesla conseguiu um feito extraordinário, trouxe a 
+                                    tecnologia de dragon ball para os carros, agora eles 
+                                    voam e podem ser armazenados em cápsulas.</p> 
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="">
+                                <img src="img/tecnologia.jpg" width="100">
+                                <h3>Novas tecnologias</h3><p>A tesla conseguiu um feito extraordinário, trouxe a 
+                                    tecnologia de dragon ball para os carros, agora eles 
+                                    voam e podem ser armazenados em cápsulas.</p> 
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="">
+                                <img src="img/tecnologia.jpg" width="100">
+                                <h3>Novas tecnologias</h3><p>A tesla conseguiu um feito extraordinário, trouxe a 
+                                    tecnologia de dragon ball para os carros, agora eles 
+                                    voam e podem ser armazenados em cápsulas.</p> 
+                            </a>
+                        </li>
+                    </ul>
+                </div> <!-- Fim da div .caixaConteudo.destaque, conteúdo do segundo destaque -->
+            </div> <!-- Fim da div #secundario -->
+ <!----------------------------------------------------------------------------------------------------------------------------------------------->
+           
+ <div id="lateral"> <!-- Início da div #lateral, coluna lateral -->
+                <div class="caixa"> <!-- Início da div .caixa, título da entrevista lateral -->
                     <h2>Última entrevista</h2>
-                </div>
-                <div class="caixaConteudo lateral-destaque">
-                    <h3>Felipe Silva: histórias que explicam a cidade</h3>
+                </div> <!-- Fim da div .caixa, título da entrevista lateral -->
+                <div class="caixaConteudo lateral-destaque"> <!-- Início da div .caixaConteudo.lateral-destaque, resumo da entrevista -->
+                    <h3 class="lateral-titulo">Felipe Silva: histórias que explicam a cidade</h3>
                     <img class="entrevista" src="img/doutor.jpg" width="100%">
-                    <p>Uma conversa sobre os desafios do dia a dia e as vozes que ajudam a entender as mudanças nos bairros.</p>
-                </div>
-            </div>
-        </div>
-    </div>
+                    <p class="lateral">Uma conversa sobre os desafios do dia a dia e as vozes que ajudam a entender as mudanças nos bairros.</p>
+                </div> <!-- Fim da div .caixaConteudo.lateral-destaque, resumo da entrevista -->
+                <div class="caixa"> <!-- Início da div .caixa, título da lista de notícias lateral -->
+                    <h2>Notícias recentes</h2>
+                </div> <!-- Fim da div .caixa, título da lista de notícias lateral -->
+                <div class="caixaConteudo destaque"> <!-- Início da div .caixaConteudo.destaque, cópia da lista Mundo -->
+                    <ul class="listaNoticias">
+                        <li>
+                            <a href="">
+                                <img src="img/doutor.jpg">
+                                <h3>Novas tecnologias</h3>
+                                <p>Profissionais de saúde combinam experiência e novos recursos para cuidar dos pacientes. A tecnologia tem ampliado as possibilidades de diagnóstico e tratamento nos hospitais.</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/taxi.jpg">
+                                <h3>Novas tecnologias</h3>
+                                <p>Táxis continuam essenciais para a mobilidade urbana. Motoristas enfrentam o trânsito das grandes cidades enquanto se adaptam a novas regras e formas de atender os passageiros.</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/planeta.png">
+                                <h3>Novas tecnologias</h3>
+                                <p>Satélites e sensores ajudam pesquisadores a acompanhar mudanças no planeta, reunindo dados sobre o clima, os oceanos e a qualidade do ar.</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/cidade.jpg" >
+                                <h3>Novas tecnologias</h3>
+                                <p>O horizonte urbano reúne áreas residenciais, comércio e grandes edifícios. O crescimento das cidades mantém em pauta o transporte e a qualidade de vida de quem vive nelas.</p>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div> <!-- Fim da div .caixaConteudo.destaque, cópia da lista Mundo -->
+            </div> <!-- Fim da div #lateral -->
+        </div> <!-- Fim da div #conteudo -->
+    </div> <!-- Fim da div #container -->
 
     <!-- Rodapé do site. -->
-    <div id="container-rodape">
-        <div id="rodape">
+    <div id="container-rodape"> <!-- Início da div #container-rodape -->
+        <div id="rodape"> <!-- Início da div #rodape -->
             <h5>All Rights Reserveds<br>&copy; Copyright 2000-2026 Notícias Cidade</h5>
-        </div>
-    </div>
+        </div> <!-- Fim da div #rodape -->
+    </div> <!-- Fim da div #container-rodape -->
 </body>
 </html>

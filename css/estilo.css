@@ -1,23 +1,27 @@
-/* Estilos base e cabeçalho. */
+/* Remove margens e preenchimentos padrão de todos os elementos. */
 *{
     margin: 0; 
     padding: 0; 
 }
+/* Define a fonte padrão e a imagem de fundo da página. */
 body{ 
     font-family: "Trebuchet MS", Helvetica,sans-serif; 
     background: #fffa url("../img/fundo.png") repeat-x; 
 }
+/* Centraliza o conteúdo principal e limita sua largura. */
 #container{ 
     width: 900px; 
     margin: 0 auto; 
     border: 1px none; 
 }
+/* Reserva o espaço do cabeçalho e posiciona seu detalhe gráfico. */
 #topo{ 
     height: 150px; 
     background: url("../img/detalhe-topo.png") no-repeat right top; 
     padding-top: 25px; 
     border: 1px none; 
 }
+/* Exibe a marca gráfica e oculta visualmente o texto alternativo. */
 .logo{ 
     width: 300px; 
     height: 100px; 
@@ -26,21 +30,24 @@ body{
     margin-left: 20px; 
     text-indent: -9999px; 
 }
+/* Remove recuos e marcadores padrão das listas. */
 ul{ 
     margin: 0; 
     padding: 0; 
     list-style: none; 
 }
-/* Navegação. */
+/* Organiza a lista de navegação sobre a faixa bordô. */
 #topo ul {
     margin-top: 0; 
     background: #5c0101; 
     float: left; 
 }
+/* Alinha horizontalmente os itens do menu e ancora seus divisores. */
 #topo ul li{ 
     position: relative;
     float: left; 
 }
+/* Desenha o divisor vertical entre os itens do menu. */
 #topo ul li:not(:last-child)::after{
     content: "";
     position: absolute;
@@ -52,6 +59,7 @@ ul{
     background: rgba(255, 255, 255, 0.35);
     pointer-events: none;
 }
+/* Formata os links do menu e define suas áreas clicáveis. */
 #topo ul li a{ 
     font-size: 0.9em; 
     display: block; 
@@ -61,10 +69,12 @@ ul{
     color: #ffff; 
     background: none;
 }
+/* Realça o texto do link enquanto o ponteiro está sobre ele. */
 #topo ul li a:hover{ 
     color: #22f506; 
     background: none; 
 }
+/* Destaca o link correspondente à página atualmente aberta. */
 body.home #navegacao a#home, 
 body.brasil #navegacao a#noticiasBrasil, 
 body.economia #navegacao a#noticiasEconomia, 
@@ -77,22 +87,25 @@ body.fotos #navegacao a#noticiasFotos{
     background: #5c0101; 
     cursor: text; 
 }
-/* Colunas e áreas de conteúdo. */
+/* Agrupa as colunas e contém seus elementos flutuantes. */
 #conteudo{
     margin-top: 70px; 
     background: #ededf7; 
     display: flow-root; 
 }
+/* Define a largura e o posicionamento da coluna principal. */
 #primario{
     width: 250px; 
     float: left; 
     background: #deeeff; 
 }
+/* Expande a coluna secundária nas páginas de coluna única. */
 #umaColuna #secundario{ 
     width: 900px; 
     background: #deeeff; 
     margin-top: 25px; 
 }
+/* Dimensiona a coluna secundária nas páginas de duas colunas. */
 #duasColunas #secundario{
     width: 600px; 
     float: left; 
@@ -100,6 +113,7 @@ body.fotos #navegacao a#noticiasFotos{
     margin-left: 25px; 
     margin-bottom: 25px; 
 }
+/* Dimensiona a coluna secundária nas páginas de três colunas. */
 #tresColunas #secundario{
     width: 300px; 
     float: left; 
@@ -107,12 +121,20 @@ body.fotos #navegacao a#noticiasFotos{
     margin-left: 25px; 
     margin-bottom: 25px; 
 }
+/* Posiciona e dimensiona a coluna lateral. */
 #lateral{ 
     width: 300px; 
     float: left; 
     background: #deeeff; 
     margin-left: 25px; 
 }
+/* Expande a coluna lateral na página de fotos para usar a largura do conteúdo. */
+body.fotos #lateral{
+    width: 900px;
+    float: none;
+    margin: 25px 0 0;
+}
+/* Cria as faixas coloridas usadas como títulos das seções. */
 .caixa{ 
     margin:0px; 
     background:#020255 ; 
@@ -122,12 +144,13 @@ body.fotos #navegacao a#noticiasFotos{
     text-align: center; 
     width: 96%; 
 }
+/* Define o fundo e o espaçamento das áreas de conteúdo. */
 .caixaConteudo{ 
     padding: 5px; 
     background: #fff url(../img/fundo-caixa.png); 
     margin-top: 10px; 
 }
-/* Listas, formulário e rodapé. */
+/* Estiliza a faixa externa do rodapé. */
 #container-rodape{
     background: #cdc1c5; 
     padding: 25px; 
@@ -135,6 +158,7 @@ body.fotos #navegacao a#noticiasFotos{
     box-sizing: border-box; 
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, Helvetica, sans-serif; 
 }
+/* Formata os links da lista na coluna principal. */
  #primario ul a{ 
     color: #000; 
     font-size: 0.9em; 
@@ -144,22 +168,26 @@ body.fotos #navegacao a#noticiasFotos{
     line-height: 30px; 
     border-bottom: 1px solid #f3f3f3; 
 }
+/* Destaca os links da lista ao passar o ponteiro. */
 #primario ul a:hover{ 
     color: #22f506; 
     background: #f3f3f3 url(../img/marcador.png)no-repeat left center; 
     padding-left: 30px; 
 }
+/* Exibe cada rótulo do formulário em sua própria linha. */
 label{ 
     padding: 10px 0px 10px 0px; 
     display: block; 
     cursor: pointer; 
     width: 95%; 
 }
+/* Dimensiona o campo de endereço de e-mail. */
 #email{ 
     margin-left: 1px; 
     width: 97%; 
     padding: 5px 0px 5px 0px; 
 }
+/* Define a aparência padrão dos campos e controles do formulário. */
 input{ 
     text-align: center; 
     padding: 5px; 
@@ -167,6 +195,7 @@ input{
     font-size: 0.9em; 
     background-color: #f3f3f3; 
 }
+/* Diferencia visualmente o botão de envio do formulário. */
 input.submit{ 
     margin-top: 5px; 
     width: 100px; 
@@ -174,6 +203,7 @@ input.submit{
     background-color: #494848; 
     border: 2px solid #333232; 
 }
+/* Ajusta a imagem da matéria e preserva sua proporção. */
 .taxi{
     margin-top: 10px;
     border: 3px solid #abababab; 
@@ -181,13 +211,14 @@ input.submit{
     width: 100%; 
     height: auto; 
 }
+/* Formata os títulos das faixas de seção. */
 h2{ 
     padding-top: 5px; 
     font-size: 1.1em; 
     color: #fff; 
     text-align: left; 
 }
-/* Título e texto da matéria em destaque. */
+/* Apresenta o título da matéria principal em uma faixa azul. */
 .destaque-titulo{
     display: block;
     margin: -5px -5px 10px;
@@ -195,35 +226,87 @@ h2{
     box-sizing: border-box;
     background: #255aff;
     color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.9em;
     text-align: left;
     text-transform: uppercase;
 }
-.destaque p{
-    padding: 5px; 
-    font-family: Arial, Helvetica, sans-serif; 
+/* Apresenta o título da entrevista lateral em uma faixa azul. */
+.lateral-titulo{
+    display: block;
+    margin: -5px -5px 10px;
+    padding: 5px;
+    box-sizing: border-box;
+    background: #255aff;
     text-align: left;
-    color: #0c0c0c; 
+    text-transform: uppercase;
 }
-.lateral-destaque{
-    padding: 14px;
-    border-left: 4px solid #5c0101;
-    background: #fff;
-}
-.lateral-destaque h3{
-    margin-bottom: 8px;
-    color: #020255;
+/* Padroniza a tipografia e o destaque dos títulos das matérias. */
+.destaque-titulo,
+.lateral-titulo{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;
-    line-height: 1.3;
+    font-weight: 700;
 }
-.lateral-destaque p{
-    color: #222;
+/* Padroniza fonte, tamanho, espaçamento e alinhamento dos textos das matérias. */
+.destaque p,
+.lateral{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 0.9em;
     line-height: 1.5;
+    padding: 5px;
+    text-align: left;
+    color: #0c0c0c;
 }
+
+/* Define o espaçamento e a divisória de cada notícia nas duas listas. */
+.listaNoticias li{
+    padding: 10px;
+    border-bottom: 5px solid #dddddd;
+    height: 80px;
+}
+
+/* Posiciona e dimensiona a miniatura de cada notícia. */
+.listaNoticias li a img{
+    float: left;
+    margin-right: 5px;
+    margin-top:5px;
+    width: 80px;
+    height: 65px;
+}
+
+/* Remove o sublinhado dos links das notícias. */
+.listaNoticias li a{
+    text-decoration: none;
+}
+
+/* Formata o resumo de cada notícia. */
+.listaNoticias li p{
+    font-size: 0.6em;
+    padding: 0;
+    color: #000;
+    text-align: justify;
+}
+
+
+/* Destaca o título de cada notícia. */
+.listaNoticias li a h3{
+    font-size: 0.7em;
+    padding: 0;
+    color: #3e7ab9;
+}
+
+/* Realça a linha inteira uma única vez quando o ponteiro passa sobre ela. */
+.listaNoticias li:hover{
+    background: #fff;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+/* Muda a cor do título durante o realce da notícia. */
+.listaNoticias li:hover h3{
+    color: #1818be;
+}
+
+/* Centraliza o texto dentro da área interna do rodapé. */
 #rodape{ 
     margin: 0 auto; 
     background: #cdddde; 
