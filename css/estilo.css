@@ -1,223 +1,235 @@
-/* Remove margens e espaçamentos padrão para permitir um layout previsível. */
+/* Estilos base e cabeçalho. */
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0; 
+    padding: 0; 
 }
-
-/* Define a tipografia e aplica a faixa de fundo horizontal da página. */
-body{
-    font-family: "Trebuchet MS", Helvetica,sans-serif;
-    background: #fffa url("../img/fundo.png") repeat-x;
+body{ 
+    font-family: "Trebuchet MS", Helvetica,sans-serif; 
+    background: #fffa url("../img/fundo.png") repeat-x; 
 }
-
-/* Centraliza a área principal e define sua largura fixa. */
-#container{
-    width: 900px;
-    margin: 0 auto;
-    border: 1px none;
+#container{ 
+    width: 900px; 
+    margin: 0 auto; 
+    border: 1px none; 
 }
-
-/* Reserva espaço para o cabeçalho e posiciona o detalhe gráfico à direita. */
-#topo{
-    height: 150px;
-    background: url("../img/detalhe-topo.png") no-repeat right top;
-    padding-top: 25px;
-    border: 1px none;
+#topo{ 
+    height: 150px; 
+    background: url("../img/detalhe-topo.png") no-repeat right top; 
+    padding-top: 25px; 
+    border: 1px none; 
 }
-
-/* Exibe a marca como imagem de fundo e oculta visualmente o texto alternativo. */
-.logo{
-    width: 300px;
-    height: 100px;
-    background: url("../img/logo.png") no-repeat left top;
-    float: left;
-    margin-left: 20px;
-    text-indent: -9999px;
+.logo{ 
+    width: 300px; 
+    height: 100px; 
+    background: url("../img/logo.png") no-repeat left top; 
+    float: left; 
+    margin-left: 20px; 
+    text-indent: -9999px; 
 }
-
-/* Remove os estilos de lista padrão para a navegação e outras listas. */
-ul{
-    margin: 0;
-    padding: 0;
-    list-style: none;
+ul{ 
+    margin: 0; 
+    padding: 0; 
+    list-style: none; 
 }
-
-/* Aplica a cor de fundo e organiza os itens da navegação horizontalmente. */
+/* Navegação. */
 #topo ul {
-    margin-top: 0;
-    background: #5c0101;
-    float: left;
+    margin-top: 0; 
+    background: #5c0101; 
+    float: left; 
 }
-
-/* Mantém cada item da navegação lado a lado. */
-#topo ul li{
-    float: left;
+#topo ul li{ 
+    position: relative;
+    float: left; 
 }
-
-/* Formata os links e exibe a imagem divisória entre eles. */
-#topo ul li a{
-    font-size: 0.9em;
-    display: block;
-    padding: 0.5em 1.5em;
-    line-height: 2.1em;
-    text-decoration: none;
-    color: #ffff;
-    background: url(../img/divisor.png)no-repeat right top;
+#topo ul li:not(:last-child)::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 1px;
+    height: 20px;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.35);
+    pointer-events: none;
 }
-
-/* Destaca o link ao passar o cursor sem exibir a divisória nesse estado. */
-#topo ul li a:hover{
-    color: #22f506;
+#topo ul li a{ 
+    font-size: 0.9em; 
+    display: block; 
+    padding: 0.5em 1.5em; 
+    line-height: 2.1em; 
+    text-decoration: none; 
+    color: #ffff; 
     background: none;
 }
-
-/* Identifica o link da página atual e impede que pareça clicável. */
-body.home #navegacao a#home,
-body.brasil #navegacao a#noticiasBrasil,
-body.economia #navegacao a#noticiasEconomia,
-body.tecnologia #navegacao a#noticiasTecnologia,
-body.esportes #navegacao a#noticiasEsportes,
-body.entretenimento #navegacao a#noticiasEntretenimento,
-body.ciencias #navegacao a#noticiasCiencias,
-body.fotos #navegacao a#noticiasFotos{
-    color: #fff;
-    background: #5c0101;
-    cursor: text;
+#topo ul li a:hover{ 
+    color: #22f506; 
+    background: none; 
 }
-
-/* Configura a área de conteúdo e contém as colunas flutuantes. */
+body.home #navegacao a#home, 
+body.brasil #navegacao a#noticiasBrasil, 
+body.economia #navegacao a#noticiasEconomia, 
+body.tecnologia #navegacao a#noticiasTecnologia, 
+body.esportes #navegacao a#noticiasEsportes, 
+body.entretenimento #navegacao a#noticiasEntretenimento, 
+body.ciencias #navegacao a#noticiasCiencias, 
+body.fotos #navegacao a#noticiasFotos{ 
+    color: #fff; 
+    background: #5c0101; 
+    cursor: text; 
+}
+/* Colunas e áreas de conteúdo. */
 #conteudo{
-    margin-top: 70px;
-    background: #ededf7;
-    display: flow-root;
+    margin-top: 70px; 
+    background: #ededf7; 
+    display: flow-root; 
 }
-
-/* Define a largura e o posicionamento da primeira coluna. */
- #primario{
-    width: 250px;
-    float: left;
-    background: #deeeff;
+#primario{
+    width: 250px; 
+    float: left; 
+    background: #deeeff; 
 }
-
-/* Define o layout de conteúdo para páginas com uma coluna. */
-#umaColuna #secundario{
-    width: 900px;
-    background: #deeeff;
-    margin-top: 25px;
+#umaColuna #secundario{ 
+    width: 900px; 
+    background: #deeeff; 
+    margin-top: 25px; 
 }
-
-/* Define a largura e o posicionamento da coluna central em páginas com duas colunas. */
- #duasColunas #secundario{
-    width: 600px;
-    float: left;
-    background: #deeeff;
-    margin-left: 25px;
-    margin-bottom: 25px;
+#duasColunas #secundario{
+    width: 600px; 
+    float: left; 
+    background: #deeeff; 
+    margin-left: 25px; 
+    margin-bottom: 25px; 
 }
-
-/* Define a largura e o posicionamento da coluna central em páginas com três colunas. */
- #tresColunas #secundario{
-    width: 300px;
-    float: left;
-    background: #deeeff;
-    margin-left: 25px;
-    margin-bottom: 25px;
+#tresColunas #secundario{
+    width: 300px; 
+    float: left; 
+    background: #deeeff; 
+    margin-left: 25px; 
+    margin-bottom: 25px; 
 }
-
-/* Define a largura e o posicionamento da coluna lateral. */
-#lateral{
-    width: 300px;
-    float: left;
-    background: #deeeff;
-    margin-left: 25px;
+#lateral{ 
+    width: 300px; 
+    float: left; 
+    background: #deeeff; 
+    margin-left: 25px; 
 }
-
-/* Destaca o cabeçalho das caixas de conteúdo. */
-.caixa{
-    margin:0px;
-    background:#020255 ;
-    height: 30px;
-    padding: 5px;
-    color: #fff;
-    text-align: center;
-    width: 96%;
+.caixa{ 
+    margin:0px; 
+    background:#020255 ; 
+    height: 30px; 
+    padding: 5px; 
+    color: #fff; 
+    text-align: center; 
+    width: 96%; 
 }
-h2{
-    padding-top: 5px;
-    font-size: 1.1em;
-    color: #fff;
-    text-align: left;
+.caixaConteudo{ 
+    padding: 5px; 
+    background: #fff url(../img/fundo-caixa.png); 
+    margin-top: 10px; 
 }
-
-/* Aplica a textura de fundo ao conteúdo interno da caixa. */
-.caixaConteudo{
-    padding: 5px;
-    background: #fff url(../img/fundo-caixa.png);
-    margin-top: 10px;
-}
-
-/* Cria a faixa do rodapé sem ultrapassar a largura da janela. */
+/* Listas, formulário e rodapé. */
 #container-rodape{
-    background: #cdc1c5;
-    padding: 25px;
-    width: 100%;
-    box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, Helvetica, sans-serif;
+    background: #cdc1c5; 
+    padding: 25px; 
+    width: 100%; 
+    box-sizing: border-box; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, Helvetica, sans-serif; 
 }
-
-/*Formatar menus laterais*/
- #primario ul a{
-    color: #000;
-    font-size: 0.9em;
+ #primario ul a{ 
+    color: #000; 
+    font-size: 0.9em; 
+    display: block; 
+    padding: 3px; 
+    text-decoration: none; 
+    line-height: 30px; 
+    border-bottom: 1px solid #f3f3f3; 
+}
+#primario ul a:hover{ 
+    color: #22f506; 
+    background: #f3f3f3 url(../img/marcador.png)no-repeat left center; 
+    padding-left: 30px; 
+}
+label{ 
+    padding: 10px 0px 10px 0px; 
+    display: block; 
+    cursor: pointer; 
+    width: 95%; 
+}
+#email{ 
+    margin-left: 1px; 
+    width: 97%; 
+    padding: 5px 0px 5px 0px; 
+}
+input{ 
+    text-align: center; 
+    padding: 5px; 
+    width: 125px; 
+    font-size: 0.9em; 
+    background-color: #f3f3f3; 
+}
+input.submit{ 
+    margin-top: 5px; 
+    width: 100px; 
+    color: #fff; 
+    background-color: #494848; 
+    border: 2px solid #333232; 
+}
+.taxi{
+    margin-top: 10px;
+    border: 3px solid #abababab; 
+    display: block; 
+    width: 100%; 
+    height: auto; 
+}
+h2{ 
+    padding-top: 5px; 
+    font-size: 1.1em; 
+    color: #fff; 
+    text-align: left; 
+}
+/* Título e texto da matéria em destaque. */
+.destaque-titulo{
     display: block;
-    padding: 3px;
-    text-decoration: none;
-    line-height: 30px;
-    border-bottom: 1px solid #f3f3f3;
-}
-
-#primario ul a:hover{
-    color: #22f506;
-    background: #f3f3f3 url(../img/marcador.png)no-repeat left center;
-    padding-left: 30px;
-}
-
-label{
-    padding: 10px 0px 10px 0px;
-    display: block;
-    cursor: pointer;
-    width: 95%;
-}
-
-#email{
-    margin-left: 1px;
-    width: 97%;
-    padding: 5px 0px 5px 0px;
-}
-
-input{
-    text-align: center;
+    margin: -5px -5px 10px;
     padding: 5px;
-    width: 125px;
-    font-size: 0.9em;
-    background-color: #f3f3f3;
-}
-
-input.submit{
-    margin-top: 5px;
-    width: 100px;
-    color: #fff;
-    background-color: #494848;
-    border: 2px solid #333232;
-}
-
-/* Centraliza o conteúdo do rodapé dentro da faixa. */
-#rodape{
-    margin: 0 auto;
-    background: #cdddde;
-    width: 100%;
-    max-width: 900px;
     box-sizing: border-box;
-    text-align: center;
-    color: #000;
+    background: #255aff;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+    text-align: left;
+    text-transform: uppercase;
+}
+.destaque p{
+    padding: 5px; 
+    font-family: Arial, Helvetica, sans-serif; 
+    text-align: left;
+    color: #0c0c0c; 
+}
+.lateral-destaque{
+    padding: 14px;
+    border-left: 4px solid #5c0101;
+    background: #fff;
+}
+.lateral-destaque h3{
+    margin-bottom: 8px;
+    color: #020255;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    line-height: 1.3;
+}
+.lateral-destaque p{
+    color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+#rodape{ 
+    margin: 0 auto; 
+    background: #cdddde; 
+    width: 100%; 
+    max-width: 900px; 
+    box-sizing: border-box; 
+    text-align: center; 
+    color: #000; 
 }

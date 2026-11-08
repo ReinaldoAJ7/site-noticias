@@ -1,126 +1,87 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <!-- Define o título, a codificação e a folha de estilos da página. -->
-        <title>Planeta Diário - Comprometido com a verdade</title>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="css/estilo.css">
-    </head>
-    
-    <!-- Identifica a página inicial e o layout de três colunas. -->
-    <body id="tresColunas" class="home"><!--Início de home-->
-    
-	<div id="container"><!--Início de container-->
-        
-        <!-- Cabeçalho, marca visual e links de navegação. -->
-        <div id="topo"><!--Início de topo-->
-
+<head>
+    <meta charset="UTF-8">
+    <title>Planeta Diário - Comprometido com a verdade</title>
+    <link rel="stylesheet" href="css/estilo.css?v=3">
+</head>
+<body id="tresColunas" class="home">
+    <div id="container">
+        <!-- Cabeçalho e navegação principal. -->
+        <div id="topo">
             <h1 class="logo">Notícia Cidade</h1>
             <ul id="navegacao">
-                <li>
-                    <a id="home" href="index.html">Home</a>
-                </li>
-                <li>
-                    <a id="noticiasBrasil" href="noticiasBrasil.html">Notícias</a>
-                </li>
-                <li>
-                    <a href="noticiasMundo.html">Contato</a>
-                </li>
-                <li>
-                    <a id="noticiasEconomia" href="noticiasEconomia.html">Sobre</a>
-                </li>
-                <li>
-                    <a id="noticiasTecnologia" href="noticiasTecnologia.html">Tecnologia</a>
-                </li>
-                <li>
-                    <a id="noticiasEsportes" href="noticiasEsportes.html">Esportes</a>
-                </li>
-                <li>
-                    <a id="noticiasEntretenimento" href="noticiasEntretenimento.html">Entretenimento</a>
-                </li>
-                <li>
-                    <a id="noticiasCiencias" href="noticiasCiencias.html">Ciências</a>
-                </li>
-                <li>
-                    <a id="noticiasFotos" href="noticiasFotos.html">Fotos</a>
-                </li>
+                <li><a id="home" href="index.html">Home</a></li>
+                <li><a id="noticiasBrasil" href="noticiasBrasil.html">Notícias</a></li>
+                <li><a href="noticiasMundo.html">Contato</a></li>
+                <li><a id="noticiasEconomia" href="noticiasEconomia.html">Sobre</a></li>
+                <li><a id="noticiasTecnologia" href="noticiasTecnologia.html">Tecnologia</a></li>
+                <li><a id="noticiasEsportes" href="noticiasEsportes.html">Esportes</a></li>
+                <li><a id="noticiasEntretenimento" href="noticiasEntretenimento.html">Entretenimento</a></li>
+                <li><a id="noticiasCiencias" href="noticiasCiencias.html">Ciências</a></li>
+                <li><a id="noticiasFotos" href="noticiasFotos.html">Fotos</a></li>
             </ul>
-        </div><!--Fim de topo-->
-        
-        <div id="conteudo">
-
-            <div id="primario"><!--Início de Primário-->
-                <div class="caixa">
-                    <h2>Entrevista</h2>      
-                </div>
-                <div class="caixaConteudo"><!--Início de caixaConteudo-->
-                        <ul>
-                            <li><a href="entrevista1.html">José de Almeida</a></li>
-                            <li><a href="entrevista2.html">Felipe Silva</a></li>
-                            <li><a href="entrevista3.html">Renato Rodrigues</a></li>
-                            <li><a href="entrevista4.html">Abelardo Silveira</a></li>
-                            <li><a href="entrevista5.html">André Carlos</a></li>
-                            <li><a href="entrevista3.html">Márcio Mello</a></li>
-                            <li><a href="entrevista4.html">João Pedro</a></li>
-                            <li><a href="entrevista5.html">Fernando Weiss</a></li>
-                        </ul>
-                </div><!--Fim de caixaConteudo-->
-
-                <div class="caixa">
-                    <h2>News</h2>      
-                </div>
-                <div class="caixaConteudo"><!--Início de caixaConteudo-->
-                    <form>
-                        <div>
-                            <label for="email">E-mail:</label>
-                            <input type="text" name="email" id="email" placeholder="Informe teu e-mail">
-                        </div>
-                        <div>
-                            <input class="submit" type="submit" value="Cadastrar">
-                        </div>
-                    </form>
-                </div><!--Fim de caixaConteudo-->
-
-            </div><!--Fim de Primário-->
-
-            <div id="secundario"><!--Início de Secundário--> 
-                <div class="caixa">
-                    <h2>Entrevista</h2>      
-                </div>
-                <div class="caixaConteudo"><!--Início de caixaConteudo-->
-                        Conteúdo<br>
-                        Conteúdo<br>
-                        Conteúdo<br>
-                        Conteúdo<br>
-                        Conteúdo<br>
-                        Conteúdo<br>
-                        Conteúdo<br>
-                </div><!--Fim de caixaConteudo-->               
-            </div><!--Fim de Secundário-->
-            
-            <div id="lateral"><!--Início de lateral-->
-                <div class="caixa">
-                    <h2>Entrevista</h2>      
-                </div>
-                <div class="caixaConteudo"><!--Início de caixaConteudo-->
-                       
-                </div><!--Fim de caixaConteudo-->  
-
-
-            </div><!--Fim de lateral-->
-
-
-        </div><!--Fim de conteúdo-->
-        
-    </div><!--Fim de container-->
-    
-    <!-- Rodapé independente do conteúdo principal. -->
-    <div id="container-rodape"><!--Início rodapé-->
-        <div id="rodape">  
-            <h5>All Rights Reserveds<br> &copy; Corpyright 2000-2026 Notícias Cidade</h5>
         </div>
-    </div><!--Fim rodapé-->
 
-    </body><!--Fim de home-->
-    
+        <!-- Conteúdo principal em três colunas. -->
+        <div id="conteudo">
+            <div id="primario">
+                <div class="caixa">
+                    <h2>Entrevista</h2>
+                </div>
+                <div class="caixaConteudo">
+                    <ul>
+                        <li><a href="entrevista1.html">José de Almeida</a></li>
+                        <li><a href="entrevista2.html">Felipe Silva</a></li>
+                        <li><a href="entrevista3.html">Renato Rodrigues</a></li>
+                        <li><a href="entrevista4.html">Abelardo Silveira</a></li>
+                        <li><a href="entrevista5.html">André Carlos</a></li>
+                        <li><a href="entrevista3.html">Márcio Mello</a></li>
+                        <li><a href="entrevista4.html">João Pedro</a></li>
+                        <li><a href="entrevista5.html">Fernando Weiss</a></li>
+                    </ul>
+                </div>
+
+                <div class="caixa">
+                    <h2>News</h2>
+                </div>
+                <div class="caixaConteudo">
+                    <form>
+                        <label for="email">E-mail:</label>
+                        <input type="email" name="email" id="email" placeholder="Informe teu e-mail">
+                        <input class="submit" type="submit" value="Cadastrar">
+                    </form>
+                </div>
+            </div>
+
+            <div id="secundario">
+                <div class="caixa">
+                    <h2>Destaque</h2></div>
+                <div class="caixaConteudo destaque">
+                    <h3 class="destaque-titulo">Nova legislação</h3>
+                    <img class="taxi" src="img/taxi.jpg" alt="Táxi">
+                    <p>Nova legislação entra em vigor nesta quarta-feira, trazendo alterações significativas para os motoristas de táxi na cidade, incluindo novas regras de licenciamento e tarifas.</p>
+                </div>
+            </div>
+
+            <div id="lateral">
+                <div class="caixa">
+                    <h2>Última entrevista</h2>
+                </div>
+                <div class="caixaConteudo lateral-destaque">
+                    <h3>Felipe Silva: histórias que explicam a cidade</h3>
+                    <img class="entrevista" src="img/doutor.jpg" width="100%">
+                    <p>Uma conversa sobre os desafios do dia a dia e as vozes que ajudam a entender as mudanças nos bairros.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé do site. -->
+    <div id="container-rodape">
+        <div id="rodape">
+            <h5>All Rights Reserveds<br>&copy; Copyright 2000-2026 Notícias Cidade</h5>
+        </div>
+    </div>
+</body>
 </html>
